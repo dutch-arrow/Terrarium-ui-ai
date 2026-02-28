@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .connected { background: #d4edda; color: #155724; }
+        .disconnected { background: #f8d7da; color: #721c24; }
+        .message {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0;
+            border-left: 3px solid #007bff;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        input {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Terrarium WebSocket Connection Test</h1>
+
+    <div>
+        <input type="text" id="url" value="ws://192.168.50.200:8765" placeholder="ws://YOUR_PI_IP:8765">
+        <button onclick="connect()">Connect</button>
+        <button onclick="disconnect()">Disconnect</button>
+    </div>
+
+    <div id="status" class="status disconnected">Disconnected</div>
+
+    <div>
+        <button onclick="sendCommand('get_status')">Get Status</button>
+        <button onclick="sendCommand('get_config')">Get Config</button>
+        <button onclick="sendCommand('ping')">Ping</button>
+    </div>
+
+    <h3>Messages:</h3>
+    <div id="messages"></div>
+
+    <script>
+        let ws = null;
+
+        function log(msg, isError = false) {
+            const div = document.createElement('div');
+            div.className = 'message';
+            div.textContent = new Date().toLocaleTimeString() + ' - ' + msg;
+            if (isError) div.style.borderLeftColor = '#dc3545';
+            document.getElementById('messages').insertBefore(div, document.getElementById('messages').firstChild);
+        }
+
+        function updateStatus(connected) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = connected ? 'Connected' : 'Disconnected';
+            statusDiv.className = 'status ' + (connected ? 'connected' : 'disconnected');
+        }
+
+        function connect() {
+            const url = document.getElementById('url').value;
+            log('Connecting to: ' + url);
+
+            try {
+                ws = new WebSocket(url);
+
+                ws.onopen = () => {
+                    log('✓ Connected!');
+                    updateStatus(true);
+                };
+
+                ws.onmessage = (event) => {
+                    log('Received: ' + event.data);
+                };
+
+                ws.onerror = (error) => {
+                    log('✗ Error: ' + error, true);
+                };
+
+                ws.onclose = () => {
+                    log('Connection closed');
+                    updateStatus(false);
+                };
+            } catch (e) {
+                log('✗ Exception: ' + e.message, true);
+            }
+        }
+
+        function disconnect() {
+            if (ws) {
+                ws.close();
+                ws = null;
+            }
+        }
+
+        function sendCommand(command) {
+            if (!ws || ws.readyState !== WebSocket.OPEN) {
+                log('✗ Not connected!', true);
+                return;
+            }
+
+            const request = {
+                command: command,
+                params: {},
+                id: Date.now().toString()
+            };
+
+            const json = JSON.stringify(request);
+            log('Sending: ' + command);
+            ws.send(json);
+        }
+    </script>
+</body>
+</html>

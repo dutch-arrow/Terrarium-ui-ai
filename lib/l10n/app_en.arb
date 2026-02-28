@@ -1,0 +1,256 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Terrarium Control",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+
+  "apply": "Apply",
+  "cancel": "Cancel",
+  "config": "Config",
+  "configuration": "Configuration",
+  "edit": "Edit",
+  "error": "Error",
+  "info": "Info",
+  "loading": "Loading...",
+  "off": "OFF",
+  "offPrefix": "OFF",
+  "on": "ON",
+  "onPrefix": "ON",
+  "refresh": "Refresh",
+  "reset": "Reset",
+  "save": "Save",
+  "success": "Success",
+  "warning": "Warning",
+
+  "clickConnectionIconToConnect": "Click the connection icon to connect",
+  "connect": "Connect",
+  "connected": "Connected",
+  "connecting": "Connecting...",
+  "connectionError": "Connection Error",
+  "disconnect": "Disconnect",
+  "disconnected": "Disconnected",
+  "notConnected": "Not connected",
+  "notConnectedToTerrarium": "Not connected to terrarium",
+  "reconnecting": "Reconnecting...",
+
+  "dashboard": "Dashboard",
+  "lastUpdate": "Last update: {time}",
+  "@lastUpdate": {
+    "description": "Last update timestamp",
+    "placeholders": {
+      "time": {
+        "example": "14:30:45",
+        "type": "Object"
+      }
+    }
+  },
+  "loadingStatus": "Loading status...",
+  "terrariumDashboard": "Terrarium Dashboard",
+
+  "appSettings": "App Settings",
+  "darkTheme": "Dark",
+  "dutch": "Dutch",
+  "english": "English",
+  "language": "Language",
+  "lightTheme": "Light",
+  "serverUrl": "Server URL",
+  "settings": "Settings",
+  "systemTheme": "System",
+  "theme": "Theme",
+
+  "autonomousControlActive": "Autonomous control active",
+  "autonomousControlDisabled": "Autonomous control disabled",
+  "controlLoopPaused": "Control Loop: PAUSED",
+  "controlLoopRunning": "Control Loop: RUNNING",
+  "deviceStatus": "Device Status",
+  "manualControlDescription": "Manually toggle entities on/off for testing. Note: Autonomous control will resume on the next control cycle.",
+  "manualEntityControl": "Manual Entity Control",
+  "pause": "Pause",
+  "resume": "Resume",
+  "controlLoop": "Control Loop",
+  "paused": "Paused",
+  "running": "Running",
+
+  "editScheduleTitle": "Edit {name} Schedule",
+  "@editScheduleTitle": {
+    "description": "Title for edit schedule dialog",
+    "placeholders": {
+      "name": {
+        "example": "Light 1",
+        "type": "Object"
+      }
+    }
+  },
+  "heatLight": "Heat Light",
+  "light1": "Light 1",
+  "light2": "Light 2",
+  "light3": "Light 3",
+  "lightEntities": "Light Entities",
+  "lights": "Lights",
+  "lightSchedules": "Light Schedules",
+  "mainLight": "Main Light",
+  "offTime": "Off Time",
+  "onTime": "On Time",
+  "schedule": "Schedule",
+  "scheduleUpdated": "Schedule updated",
+  "timeFormatHelper": "Format: HH:MM (24-hour)",
+  "uvLight": "UV Light",
+
+  "editHumidityThresholds": "Edit Humidity Thresholds",
+  "failedToUpdate": "Failed to update: {error}",
+  "@failedToUpdate": {
+    "description": "Error message when update fails",
+    "placeholders": {
+      "error": {
+        "example": "Connection error",
+        "type": "Object"
+      }
+    }
+  },
+  "gapHysteresis": "Gap: {value}% (hysteresis)",
+  "@gapHysteresis": {
+    "description": "Gap/hysteresis value",
+    "placeholders": {
+      "value": {
+        "example": "20",
+        "type": "Object"
+      }
+    }
+  },
+  "humidifier": "Humidifier",
+  "humidity": "Humidity",
+  "humidityControl": "Humidity Control",
+  "humidityThresholds": "Humidity Thresholds",
+  "maxHumidity": "Max Humidity",
+  "maximumTurnOff": "Maximum (Turn OFF)",
+  "maximumValue": "Maximum: {value}%",
+  "@maximumValue": {
+    "description": "Maximum humidity value",
+    "placeholders": {
+      "value": {
+        "example": "60",
+        "type": "Object"
+      }
+    }
+  },
+  "minHumidity": "Min Humidity",
+  "minimumTurnOn": "Minimum (Turn ON)",
+  "minimumValue": "Minimum: {value}%",
+  "@minimumValue": {
+    "description": "Minimum humidity value",
+    "placeholders": {
+      "value": {
+        "example": "40",
+        "type": "Object"
+      }
+    }
+  },
+  "minMustBeLessThanMax": "Minimum must be less than maximum",
+  "thresholdsUpdated": "Thresholds updated",
+
+  "durationSeconds": "Duration: {value} seconds",
+  "@durationSeconds": {
+    "description": "Spray duration in seconds",
+    "placeholders": {
+      "value": {
+        "example": "5",
+        "type": "Object"
+      }
+    }
+  },
+  "editSprayerConfiguration": "Edit Sprayer Configuration",
+  "hours": "hours",
+  "intervalHours": "Interval: {value} hours",
+  "@intervalHours": {
+    "description": "Spray interval in hours",
+    "placeholders": {
+      "value": {
+        "example": "2.5",
+        "type": "Object"
+      }
+    }
+  },
+  "seconds": "seconds",
+  "sprayDuration": "Spray Duration",
+  "sprayer": "Sprayer",
+  "sprayerConfigUpdated": "Sprayer config updated",
+  "sprayerConfiguration": "Sprayer Configuration",
+  "sprayerSettings": "Sprayer Settings",
+  "sprayInterval": "Spray Interval",
+
+  "insideHumidity": "Inside Humidity",
+  "insideTemp": "Inside Temp",
+  "insideTerrarium": "Inside Terrarium",
+  "outside": "Outside",
+  "outsideHumidity": "Outside Humidity",
+  "outsideTemp": "Outside Temp",
+  "readInterval": "Read Interval",
+  "sensorSettings": "Sensor Settings",
+  "temperature": "Temperature",
+
+  "exhaustFan": "Exhaust Fan",
+  "fan1": "Fan 1",
+  "fan2": "Fan 2",
+  "fans": "Fans",
+  "intakeFan": "Intake Fan",
+  "otherDevices": "Other Devices",
+  "otherEntities": "Other Entities",
+
+  "allEntityTestsCompleted": "All entity tests completed",
+  "entityTesting": "Entity Testing",
+  "entityTestingDescription": "Test individual entities or run comprehensive tests on all entities.",
+  "testAllEntities": "Test All Entities",
+  "testCompleted": "{entity} test completed",
+  "@testCompleted": {
+    "description": "Message shown when test is completed",
+    "placeholders": {
+      "entity": {
+        "example": "Light",
+        "type": "Object"
+      }
+    }
+  },
+  "testFailed": "Test failed: {error}",
+  "@testFailed": {
+    "description": "Error message when test fails",
+    "placeholders": {
+      "error": {
+        "example": "Connection timeout",
+        "type": "Object"
+      }
+    }
+  },
+  "testHumidifier": "Test Humidifier",
+  "testInfoMessage": "Entity tests verify functionality without permanently disrupting the control system. Original states are restored after testing.",
+  "testing": "Testing",
+  "testingAllEntities": "Testing all entities...",
+  "testingEntity": "Testing {entity}...",
+  "@testingEntity": {
+    "description": "Message shown when testing an entity",
+    "placeholders": {
+      "entity": {
+        "example": "light1",
+        "type": "Object"
+      }
+    }
+  },
+  "testLight1": "Test Light 1",
+  "testLight2": "Test Light 2",
+  "testLight3": "Test Light 3",
+  "testSprayer": "Test Sprayer",
+
+  "history": "History",
+  "deviceSwitchingHistory": "Device Switching History",
+  "timeInterval": "Time interval:",
+  "fiveMinutes": "5m",
+  "tenMinutes": "10m",
+  "fifteenMinutes": "15m",
+  "thirtyMinutes": "30m",
+  "oneHour": "1h",
+  "noEventsYet": "No Events Yet",
+  "deviceStateChangesWillAppearHere": "Device state changes will appear here",
+  "noDataAvailable": "No data available",
+  "time": "Time"
+}
